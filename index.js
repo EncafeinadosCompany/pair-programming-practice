@@ -8,6 +8,10 @@ document.getElementById("product-form").addEventListener("submit", function(even
        name: nameInput.value,
        price: priceInput.value,
     }
+    if (nameInput === '' || isNaN(priceInput)) {
+        alert("Porfavor ingresa un nombre y un precio valido")
+        return
+    }
     products.push(list)
 const producList = document.getElementById ("product_list")
 })
