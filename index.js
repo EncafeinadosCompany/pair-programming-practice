@@ -3,7 +3,7 @@ const nameInput = document.getElementById("name-input")
 const priceInput = document.getElementById("price-input")
 
 document.getElementById("product-form").addEventListener("submit", function(event){
-     if (nameInput === '' || isNaN(priceInput)) {
+     if (name === '' || isNaN(price)) {
         alert("Porfavor ingresa un nombre y un precio valido")
         return
     }
@@ -18,6 +18,11 @@ document.getElementById("product-form").addEventListener("submit", function(even
    
    
     products.push(list)
-    const producList = document.getElementById ("product_list")
     
+
 })
+
+function updateList(){
+    let producList = document.getElementById ("product_list")
+    producList.innerHTML = ""
+}
