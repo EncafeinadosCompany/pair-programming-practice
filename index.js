@@ -9,23 +9,18 @@ document.getElementById("product-form").addEventListener("submit", function(even
        name: nameInput.value,
        price: parseFloat(priceInput.value)
     }
-
     if (list.name === '' || isNaN(list.price)) {
         alert("Porfavor ingresa un nombre y un precio valido")
         return
     }
-
     products.push(list)
     console.log(products)
     allProducts()
-    
 })
-
 function allProducts(){
     const producList = document.getElementById ("product_list")
     producList.innerHTML=""
     let total=0
-
     products.forEach(product => {
         let item= document.createElement("li");
         item.textContent = `${product.name}: $${product.price.toFixed(2)}`
